@@ -21,9 +21,6 @@ Per eseguire il gioco, seguire questi passaggi:
 ## Interfaccia Grafica
 Il gioco utilizza un'interfaccia grafica semplice basata su Swing, che mostra la griglia di gioco e fornisce un'etichetta per visualizzare lo stato corrente del gioco (turno del giocatore, vincitore o pareggio).
 
-## Contributi
-Questo progetto è open source e le contribuzioni sono benvenute. Se desideri contribuire al miglioramento del gioco, sentiti libero di aprire un pull request su GitHub.
-
 ## Autore
 Questo gioco è stato creato da Francesco Dal Canto.
 
