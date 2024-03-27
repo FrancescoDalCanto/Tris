@@ -71,7 +71,7 @@ public class Main extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(this, "Ha vinto il giocatore " + ((currentPlayer == 'X') ? playerXName : playerOName));
                 disabilitaPulsanti();
             } else if (controllaPareggio()) {
-                statusLabel.setText("Pareggio!");
+                JOptionPane.showMessageDialog(this, "Pareggio!");
                 disabilitaPulsanti();
             } else {
                 currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
