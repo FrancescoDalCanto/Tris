@@ -7,6 +7,8 @@ public class Main extends JFrame implements ActionListener {
     private char[][] matrix;
     private char currentPlayer;
     private JLabel statusLabel;
+    private String playerXName;
+    private String playerOName;
 
     public Main() {
         setTitle("Tris");
@@ -21,6 +23,15 @@ public class Main extends JFrame implements ActionListener {
         matrix = new char[3][3];
         currentPlayer = 'X';
 
+        // Chiedi i nomi dei giocatori
+        playerXName = JOptionPane.showInputDialog(this, "Nome giocatore X:");
+        playerOName = JOptionPane.showInputDialog(this, "Nome giocatore O:");
+
+        if (playerXName == null || playerXName.isEmpty())
+            playerXName = "Giocatore X";
+        if (playerOName == null || playerOName.isEmpty())
+            playerOName = "Giocatore O";
+
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 buttons[i][j] = new JButton();
@@ -30,7 +41,7 @@ public class Main extends JFrame implements ActionListener {
             }
         }
 
-        statusLabel = new JLabel("Turno del giocatore X");
+        statusLabel = new JLabel("Turno di " + playerXName);
         add(gridPanel, BorderLayout.CENTER);
         add(statusLabel, BorderLayout.SOUTH);
 
@@ -57,14 +68,14 @@ public class Main extends JFrame implements ActionListener {
             matrix[row][col] = currentPlayer;
             button.setText(String.valueOf(currentPlayer));
             if (controllaVittoria()) {
-                JOptionPane.showMessageDialog(this, "Ha vinto il giocatore " + currentPlayer);
+                JOptionPane.showMessageDialog(this, "Ha vinto il giocatore " + ((currentPlayer == 'X') ? playerXName : playerOName));
                 disabilitaPulsanti();
             } else if (controllaPareggio()) {
                 statusLabel.setText("Pareggio!");
                 disabilitaPulsanti();
             } else {
                 currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
-                statusLabel.setText("Turno del giocatore " + currentPlayer);
+                statusLabel.setText("Turno di " + ((currentPlayer == 'X') ? playerXName : playerOName));
             }
         } else {
             JOptionPane.showMessageDialog(this, "Mossa non valida. Riprova.");
