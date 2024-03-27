@@ -1,7 +1,7 @@
 # Tris in Java
 
 ## Descrizione
-Questo è un semplice gioco del Tris implementato in Java utilizzando l'interfaccia grafica Swing. Il gioco consente a due giocatori di alternarsi nel segnare le caselle di una griglia 3x3 fino a quando uno dei giocatori vince o si verifica un pareggio.
+Questo è un gioco del Tris implementato in Java utilizzando l'interfaccia grafica Swing. Il gioco permette a due giocatori di alternarsi nel segnare le caselle di una griglia 3x3 fino a quando uno dei giocatori vince o si verifica un pareggio.
 
 ## Requisiti
 - Java Development Kit (JDK) installato sul sistema.
@@ -9,8 +9,8 @@ Questo è un semplice gioco del Tris implementato in Java utilizzando l'interfac
 ## Istruzioni per l'esecuzione
 Per eseguire il gioco, seguire questi passaggi:
 1. Assicurarsi che Java sia installato e configurato correttamente sul sistema.
-2. Compilare il file sorgente `Main.java` utilizzando il comando: javac Main.java
-3. Eseguire il file compilato `Main.class` utilizzando il comando: java Main
+2. Compilare il file sorgente `Main.java` utilizzando il comando: `javac Main.java`
+3. Eseguire il file compilato `Main.class` utilizzando il comando: `java Main`
 4. Il gioco si aprirà in una finestra separata e sarà pronto per essere giocato.
 
 ## Regole del Gioco
@@ -23,4 +23,3 @@ Il gioco utilizza un'interfaccia grafica semplice basata su Swing, che mostra la
 
 ## Autore
 Questo gioco è stato creato da Francesco Dal Canto.
-
